@@ -1,0 +1,100 @@
+[
+    {
+        "street": 5,
+        "avenue": 4,
+        "area": 150,
+        "price": 1800000,
+        "isSold": false,
+        "owner": {
+            "name": "ron",
+            "ID": 100000001
+        }
+
+    },
+    {
+        "street": 5,
+        "avenue": 4,
+        "area": 20,
+        "price": 600000,
+        "isSold": false,
+        "owner": {
+            "name": "dana",
+            "ID": 100000006
+        },
+        "internalNumber": 1,
+        "mainApartment": {
+            "address": "(5,4)"
+        }
+    },
+    {
+        "street": 5,
+        "avenue": 4,
+        "area": 65,
+        "price": 500000,
+        "isSold": false,
+        "owner": {
+            "name": "yuval",
+            "ID": 100000004
+        },
+        "internalNumber": 2,
+        "mainApartment": {
+            "address": "(5,4)"
+        }
+    },
+    {
+        "street": 5,
+        "avenue": 4,
+        "area": 40,
+        "price": 450000,
+        "isSold": false,
+        "owner": {
+            "name": "leo",
+            "ID": 100000002
+        },
+        "internalNumber": 3,
+        "mainApartment": {
+            "address": "(5,4)"
+        }
+    },
+    {
+        "street": 5,
+        "avenue": 4,
+        "area": 25,
+        "price": 30000,
+        "isSold": false,
+        "owner": {
+            "name": "leo",
+            "ID": 100000002
+        },
+        "internalNumber": 1,
+        "mainApartment": {
+            "address": "(5,4,3)"
+        }
+        },
+    {
+        "street": 5,
+        "avenue": 4,
+        "area": 10,
+        "price": 30000,
+        "isSold": false,
+        "owner": {
+            "name": "fred",
+            "ID": 100000003
+        },
+        "internalNumber": 1,
+        "mainApartment": {
+            "address": "(5,4,3,1)"
+        }
+        },
+    {
+        "street": 9,
+        "avenue": 6,
+        "area": 180,
+        "price": 1800000,
+        "isSold": true,
+        "owner": {
+            "name": "mike",
+            "ID": 100000005
+        }
+    }
+]
