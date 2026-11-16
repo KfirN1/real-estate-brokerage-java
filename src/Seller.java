@@ -25,7 +25,7 @@ public class Seller extends User {
 
     public void deleteProperty (Property property) {
         getUserService().getUserProperties(this).remove(property);
-        getUserService().getAllProperties().remove(property);
+        PropertyManager.getInstance().removeProperty(property);
         notifyObservers("property " + property.getAddress() + " sold.");
     }
     @Override

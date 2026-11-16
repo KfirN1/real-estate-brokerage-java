@@ -15,7 +15,7 @@ class BuyerTest {
 
     @BeforeEach
     void setUp() {
-        PropertyManager.getInstance().getAllProperties().clear();
+        PropertyManager.getInstance().clearProperties();
         UserService.getInstance().getUsersCollection().clear();
 
         buyer = new Buyer("John Doe", 101);

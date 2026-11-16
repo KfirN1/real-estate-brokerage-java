@@ -13,6 +13,7 @@ with an emphasis on design patterns and unit testing.
 | **Factory** | `PropertyFactory`, `PropertyCollectionFactory`, `FileReaderFactory` |
 | **Strategy** | pluggable storage (`PropertyCollectionStrategy` → `HashMapPropertyCollectionStrategy`) and file loading (`FileReaderStrategy` → `JsonFileReaderStrategy`) |
 | **Adapter** | `PropertyTypeAdapter` – Gson `TypeAdapter` that maps JSON to the property hierarchy |
+| **Observer** | `Seller` keeps a list of `observer`s (e.g. `Realtor`) and notifies them when a property changes |
 | **Decorator** | `PropertyWithServices` adds services (cleaning, design, transport, contract guarantor) to a property |
 
 ## Features
@@ -20,7 +21,7 @@ with an emphasis on design patterns and unit testing.
 - Buy properties through a realtor, track owned and sold properties
 - Query unsold properties and property details
 - Load properties and owners from a JSON file
-- JUnit 5 tests for buyers, sellers, realtors, factories, the manager, the adapter and the JSON reader
+- 40 JUnit 5 tests (all passing) for buyers, sellers, realtors, factories, the manager, the adapter and the JSON reader
 
 ## Running
 Open the folder in IntelliJ IDEA, add **Gson** and **JUnit 5** to the project libraries, and run `Main` or the tests.

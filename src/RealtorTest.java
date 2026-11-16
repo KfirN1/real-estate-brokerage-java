@@ -10,6 +10,8 @@ class RealtorTest {
 
     @BeforeEach
     void setUp() {
+        PropertyManager.getInstance().clearProperties();
+        UserService.getInstance().getUsersCollection().clear();
         realtor = new Realtor("John Doe", 100);
 
         property = new Apartment(10, 5, 150, 700000, false, new Seller("Alice", 1));

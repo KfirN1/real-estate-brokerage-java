@@ -71,12 +71,7 @@ public class JsonFileReaderStrategy implements FileReaderStrategy {
 
                     propertiesMap.put(internalProperty.getAddress(), internalProperty);
 
-                    // הוספת הדירה הפנימית לדירה הראשית
-                    if (mainProperty instanceof Apartment) {
-                        ((Apartment) mainProperty).getInternalApartments().add((InternalApartment) internalProperty);
-                    } else if (mainProperty instanceof InternalApartment) {
-                        ((InternalApartment) mainProperty).getMainApartment().getInternalApartments().add((InternalApartment) internalProperty);
-                    }
+                    // הדירה הפנימית מקשרת את עצמה לדירה הראשית בבנאי של InternalApartment
 
                     iterator.remove();
                     progressMade = true;

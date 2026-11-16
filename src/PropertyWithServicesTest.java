@@ -13,6 +13,8 @@ class PropertyWithServicesTest {
 
     @BeforeEach
     void setUp() {
+        PropertyManager.getInstance().clearProperties();
+        UserService.getInstance().getUsersCollection().clear();
         baseProperty = new Apartment(10, 5, 100, 500000, false, new Seller("Alice", 1));
         propertyWithServices = new PropertyWithServices(baseProperty);
 
@@ -59,8 +61,8 @@ class PropertyWithServicesTest {
 
         List<String> descriptions = propertyWithServices.getServicesDescription();
         assertEquals(2, descriptions.size());
-        assertTrue(descriptions.contains("Cleaning"));
-        assertTrue(descriptions.contains("Moving"));
+        assertTrue(descriptions.contains(cleaningService.getDescription()));
+        assertTrue(descriptions.contains(transportServices.getDescription()));
     }
 
     @Test

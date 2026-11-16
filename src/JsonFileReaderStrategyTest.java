@@ -13,11 +13,11 @@ class JsonFileReaderStrategyTest {
 
     @BeforeEach
     void setUp() throws IOException {
-        PropertyManager.getInstance().getAllProperties().clear();
+        PropertyManager.getInstance().clearProperties();
         UserService.getInstance().getUsersCollection().clear();
 
         Seller seller = new Seller("Alice", 1);
-        Buyer buyer = new Buyer("Bob", 2);
+        Seller secondSeller = new Seller("Bob", 2);
 
         // יצירת אסטרטגיית הקריאה עם השירות
         jsonFileReaderStrategy = new JsonFileReaderStrategy(userService);
@@ -61,7 +61,7 @@ class JsonFileReaderStrategyTest {
 
         // מציאת הדירה הראשית
         Property mainApartment = properties.stream()
-                .filter(p -> p.getAddress().equals("10-5"))
+                .filter(p -> p.getAddress().equals("(10,5)"))
                 .findFirst()
                 .orElse(null);
 
@@ -103,7 +103,7 @@ class JsonFileReaderStrategyTest {
                         "isSold": false,
                         "owner ID": 2,
                         "mainApartment": {
-                            "address": "10-5"
+                            "address": "(10,5)"
                         }
                     },
                     {

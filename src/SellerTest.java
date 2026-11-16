@@ -13,14 +13,14 @@ class SellerTest {
 
     @BeforeEach
     void setUp() {
+        PropertyManager.getInstance().clearProperties();
         UserService.getInstance().getUsersCollection().clear();
 
         seller = new Seller("Alice", 1);
         realtor = new Realtor("Charlie", 2);
         property = new Apartment(10, 5, 120, 500000, false, seller);
 
-        userService.getUserProperties(seller).add(property);
-        userService.getAllProperties().add(property);
+        PropertyManager.getInstance().addProperty(property);
 
     }
 
